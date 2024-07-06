@@ -1,4 +1,16 @@
-Here's a formatted README code based on your provided data:
+## Additional Programming Concepts
+
+### Class
+- A user-defined datatype and blueprint for creating objects.
+- A class is a collection of methods and attributes.
+  
+### Primitive and Non-Primitive Datatypes
+- Primitive Datatypes: int, float, double, bool
+- Non-Primitive Datatypes: array, List, Map, Set, String
+
+### Nullable and Null-aware Operators
+- ? Nullable operator: Indicates that a variable or object can be null.
+- ! Null-aware operator: Ensures that a value will be present.
 
 ```markdown
 # Flutter Application
