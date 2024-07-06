@@ -82,6 +82,7 @@ Static means the data will not update/change/modify.
 ## Example: MyApp Widget
 
 ```dart
+
 import 'package:flutter/material.dart';
 
 class MyApp extends StatelessWidget {
@@ -96,6 +97,99 @@ class MyApp extends StatelessWidget {
   }
 }
 ```
+
+# Constructors in Dart
+
+In Dart, constructors are special methods used to initialize the attributes of a class. This document provides an overview of different types of constructors in Dart, using a `Movie` class as an example.
+
+## Movie Class Example
+
+
+```markdown
+
+```dart
+class Movie {
+  late String name, date, gener;
+
+  - Default Constructor
+  Movie() {
+    print("Today BOX OFFICE");
+  }
+
+  - Named Constructor
+  Movie.set({
+    required String name,
+    required String date,
+    required String gener,
+  }) {
+    this.name = name;
+    this.date = date;
+    this.gener = gener;
+  }
+
+  - Factory Constructor
+  factory Movie.cinema() {
+    return Movie.set(
+        name: "Pushpa 2", date: "12-12-2012", gener: "Action/Crime");
+  }
+
+  - Method to print movie details
+  void releaseMovie() {
+    print("Movie name : $name");
+    print("Release Date : $date");
+    print("Movie Gener : $gener");
+  }
+}
+
 ```
 
-This README includes a brief explanation of the concepts along with the example code you provided.
+### Types of Constructors
+
+#### Default Constructor
+- The default constructor is used to initialize attributes with default values or to execute a specific code block when an object is created.
+- In the example, the default constructor prints a message when a `Movie` object is created.
+
+```dart
+Movie() {
+  print("Today BOX OFFICE");
+}
+```
+
+#### Named Constructor
+- Named constructors provide a way to create multiple constructors in a class, each with a different name.
+- They are used to initialize attributes with specific values.
+
+```dart
+Movie.set({
+  required String name,
+  required String date,
+  required String gener,
+}) {
+  this.name = name;
+  this.date = date;
+  this.gener = gener;
+}
+```
+
+#### Factory Constructor
+- Factory constructors can return an instance of the current class.
+- They are used to control the instance creation process and can return existing instances instead of always creating new ones.
+
+```dart
+factory Movie.cinema() {
+  return Movie.set(
+      name: "Pushpa 2", date: "12-12-2012", gener: "Action/Crime");
+}
+```
+
+## Method Example
+
+The `releaseMovie` method in the `Movie` class prints the details of a movie.
+
+```dart
+void releaseMovie() {
+  print("Movie name : $name");
+  print("Release Date : $date");
+  print("Movie Gener : $gener");
+}
+```
