@@ -195,3 +195,106 @@ void releaseMovie() {
   print("Movie Gener : $gener");
 }
 ```
+
+```markdown
+
+# Flutter Container Widget Example
+
+This Flutter application demonstrates the use of the `Container` widget to create custom shapes with various properties like height, width, decoration, padding, margin, and alignment.
+
+## Code Explanation
+
+### Main Application
+
+The main application consists of a stateless widget (`MyApp`) that sets up the `MaterialApp` and a stateful widget (`HomePage`) that contains the `Container`.
+
+```dart
+import 'package:flutter/material.dart';
+
+// Parent widget : user-defined
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: HomePage(), // Home: attach screens here
+    );
+  }
+}
+```
+
+### Home Page
+
+The `HomePage` widget is a stateful widget that contains a `Scaffold` with an `AppBar` and a centered `Container` widget.
+
+```dart
+// Home page widget
+class HomePage extends StatefulWidget {
+  const HomePage({super.key});
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        leading: const Icon(Icons.menu),
+        title: const Text('Home Page'),
+      ),
+      body: Center(
+        child: Container(
+          height: 100,
+          width: 300,
+          alignment: Alignment.center,
+          decoration: const BoxDecoration(
+            color: Colors.green,
+            borderRadius: BorderRadius.vertical(
+              top: Radius.circular(10),
+              bottom: Radius.circular(10),
+            ),
+            border: Border.symmetric(
+              vertical: BorderSide(width: 2),
+            ),
+            gradient: LinearGradient(colors: [
+              Colors.deepOrange,
+              Colors.white,
+              Colors.green,
+            ]),
+          ),
+          child: Container(
+            height: 50,
+            width: 50,
+            color: Colors.amber,
+          ),
+        ),
+      ),
+    );
+  }
+}
+```
+
+### Container Properties
+
+- **child**: Connects another widget within the container.
+- **height** and **width**: Define the height and width of the container.
+- **decoration**: Used to decorate the container with properties like color, border, shadow, and border radius.
+- **padding**: Inner spacing within the container.
+- **margin**: Outer spacing outside the container.
+- **alignment**: Aligns the child widget within the container.
+
+### BoxDecoration Properties
+
+- **color**: Sets the background color of the container.
+- **borderRadius**: Creates rounded corners for the container. In this example, the container has a vertical border radius of 10 at the top and bottom.
+- **border**: Defines the border of the container. Here, a symmetric border with a vertical border side width of 2 is used.
+- **gradient**: Applies a linear gradient background to the container. The gradient transitions through deep orange, white, and green colors.
+
+### Inner Container
+
+The inner container demonstrates nesting of containers by setting height, width, and background color.
+
