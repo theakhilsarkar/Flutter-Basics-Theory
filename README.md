@@ -297,3 +297,190 @@ class _HomePageState extends State<HomePage> {
 
 The inner container demonstrates nesting of containers by setting height, width, and background color.
 
+
+### ----------------------------------------------------------------------------------------------------------------------------
+Certainly! Below is the readme formatted code explaining the given Flutter widget:
+
+```markdown
+# Flutter GestureDetector with Custom Container Example
+
+This example demonstrates the use of the `GestureDetector` widget to handle tap gestures on a custom-designed `Container` widget. The container is centered and styled as a circular button with shadows.
+
+## Code Explanation
+
+### Widget Structure
+
+This example uses an `Align` widget to center a `GestureDetector` containing a `Container` widget with custom styling.
+
+```dart
+Align(
+  alignment: Alignment.center,
+  child: GestureDetector(
+    onTap: () {
+      print("button pressed !");
+    },
+    child: Container(
+      alignment: Alignment.center,
+      child: Text(
+        'ON',
+        style: TextStyle(color: Colors.white),
+      ),
+      height: 150,
+      width: 150,
+      decoration: BoxDecoration(
+        color: Colors.black,
+        shape: BoxShape.circle,
+        boxShadow: [
+          BoxShadow(
+            color: Colors.green,
+            spreadRadius: 10,
+            blurRadius: 25,
+          ),
+        ],
+      ),
+    ),
+  ),
+)
+```
+
+### Align Widget
+
+- **alignment**: Sets the alignment of the child widget within the parent. Here, it centers the `GestureDetector` widget.
+
+### GestureDetector Widget
+
+The `GestureDetector` widget detects various gestures, such as taps, drags, and swipes.
+
+- **onTap**: A callback function that is called when the widget is tapped. In this example, it prints "button pressed !" to the console.
+
+### Container Widget
+
+The `Container` widget is used to create a custom-styled button.
+
+- **alignment**: Centers the text within the container.
+- **child**: Contains a `Text` widget with the text "ON" and a white color.
+- **height** and **width**: Sets the dimensions of the container to 150x150.
+- **decoration**: Customizes the appearance of the container.
+
+### BoxDecoration Properties
+
+- **color**: Sets the background color of the container to black.
+- **shape**: Sets the shape of the container to a circle using `BoxShape.circle`.
+- **boxShadow**: Adds shadow effects to the container.
+
+  - **color**: Sets the shadow color to green.
+  - **spreadRadius**: The amount the shadow will spread.
+  - **blurRadius**: The blur radius of the shadow.
+
+### Usage
+
+To run this code, place it in the appropriate build method of a widget in your Flutter project and execute the app using `flutter run`.
+
+```shell
+flutter run
+```
+
+This will start the application and display a centered, circular button with text "ON". Tapping the button will trigger the `onTap` callback, printing a message to the console.
+```
+
+This readme code provides a clear and detailed explanation of the given widget, ensuring that users can understand and utilize the example with ease.
+
+Certainly! Below is the readme formatted code that explains the given Flutter widget and its properties:
+
+```markdown
+# Flutter Container with SingleChildScrollView and FloatingActionButton Example
+
+This example demonstrates the use of a `Container` widget with horizontal scrolling capabilities provided by `SingleChildScrollView` and the use of a `FloatingActionButton` to update the state in a `StatefulWidget`.
+
+## Code Explanation
+
+### Container with SingleChildScrollView
+
+The `Container` widget is styled with a background color and contains a horizontally scrollable `Row` of widgets.
+
+```dart
+Container(
+  color: Colors.green.shade200,
+  child: SingleChildScrollView(
+    scrollDirection: Axis.horizontal,
+    child: Row(
+      children: [
+       // all widgets will be here....
+      ],
+    ),
+  ),
+)
+```
+
+- **color**: Sets the background color of the container.
+- **SingleChildScrollView**: Enables scrolling for a single child widget.
+  - **scrollDirection**: Sets the scrolling direction to horizontal.
+  - **Row**: Arranges its children in a horizontal line.
+
+### FloatingActionButton
+
+The `FloatingActionButton` widget provides a button that performs an action when pressed. In this example, it increments a counter and prints its value.
+
+```dart
+floatingActionButton: FloatingActionButton(
+  onPressed: () {
+    setState(() {
+      count++;
+    });
+    print(count);
+  },
+  backgroundColor: Colors.white,
+  child: Icon(Icons.add),
+)
+```
+
+- **onPressed**: A callback function that is called when the button is pressed.
+  - **setState**: Used to update the state of the widget and rebuild the UI.
+  - **count++**: Increments the counter variable.
+  - **print(count)**: Prints the current value of the counter to the console.
+- **backgroundColor**: Sets the background color of the button to white.
+- **child**: Contains an `Icon` widget to display an add icon.
+
+### Additional Explanations
+
+#### Hot Reload and Hot Restart
+
+- **Hot Reload**: Rebuilds the UI without restarting the application. The state is preserved.
+- **Hot Restart**: Restarts the entire application. The state is reset.
+
+#### Functions
+
+- **Function as an Expression**: A single line function that returns a value.
+  ```dart
+  int sum(int a, int b) => a + b;
+  ```
+- **Anonymous Function**: A function without a name.
+  ```dart
+  () {
+    // code
+  }
+  ```
+
+### Row and Column Widgets
+
+- **Row**: Arranges its children horizontally.
+  - **children**: A list of widgets to display in a row.
+  - **default width**: Maximum width available.
+  - **default height**: Height based on content.
+- **Column**: Arranges its children vertically.
+  - **children**: A list of widgets to display in a column.
+  - **default height**: Maximum height available.
+  - **default width**: Width based on content.
+
+### Usage
+
+To run this code, place it in the appropriate build method of a widget in your Flutter project and execute the app using `flutter run`.
+
+```shell
+flutter run
+```
+
+This will start the application and display a container with horizontally scrollable content and a floating action button to increment and display a counter.
+```
+
+This readme code provides a clear and detailed explanation of the given widget, ensuring that users can understand and utilize the example with ease.
