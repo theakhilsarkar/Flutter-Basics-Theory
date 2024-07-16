@@ -1,5 +1,6 @@
 ## Additional Programming Concepts
 
+
 ### Class
 - A user-defined datatype and blueprint for creating objects.
 - A class is a collection of methods and attributes.
