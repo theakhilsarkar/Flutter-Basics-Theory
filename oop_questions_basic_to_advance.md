@@ -1,6 +1,3 @@
-Here are **20 eye-catching Dart OOP questions** with **real-life examples** to help students connect concepts to practical scenarios! 🚀🔥  
-
----
 
 ### **🔰 Basic OOP Concepts in Dart**  
 
@@ -67,9 +64,3 @@ Here are **20 eye-catching Dart OOP questions** with **real-life examples** to h
 
 2️⃣0️⃣ **🌊 Streams & Event Handling**  
    - Build a **`WeatherStation`** ☀️ class that streams temperature updates **every second**. Subscribe to this stream and display real-time weather updates.  
-
----
-
-These **real-life-based questions** help students **connect OOP concepts** to **industry problems** and **become job-ready**! 🚀👨‍💻👩‍💻  
-
-Would you like **solutions or explanations** for any of these? 💡🔥
