@@ -1,4 +1,4 @@
-```markdown
+
 # Inheritance in Dart
 
 ## Introduction
@@ -83,4 +83,4 @@ void main() {
 * Parent classes cannot access the methods and attributes of their child classes (reverse inheritance is not possible).
 * The `super` keyword is critical when you want to access parent class members from within a child class.
 * Inheritance promotes code reuse and helps organize code into a logical hierarchy.
-```
+
