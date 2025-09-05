@@ -1,4 +1,4 @@
-```markdown
+
 # Object-Oriented Programming (OOP) in Dart
 
 This document provides an overview of Object-Oriented Programming (OOP) concepts in Dart, suitable for study and interview preparation.
@@ -174,4 +174,3 @@ void main() {
   // var a1 = Area(); // it fix type of first assign value
   // dynamic a2 = Area(); // its dynamic, can accept all type of value.
 }
-```
